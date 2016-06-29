@@ -9,7 +9,7 @@ This plugin is inspired by [sbt-musical](https://github.com/tototoshi/sbt-musica
 - Google Chrome
 - ChromeDriver (https://sites.google.com/a/chromium.org/chromedriver/)
 
-You have to add a chromedriver directory to PATH or specify chromedriver path via `webdriver.chrome.driver` java property.
+You have to add a chromedriver directory to PATH or specify chromedriver path via `webdriver.chrome.driver` system property.
 
 ```bash
 $ export PATH="$PATH:/path/to/chromedriver_directory"

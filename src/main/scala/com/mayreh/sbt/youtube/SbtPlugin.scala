@@ -52,9 +52,19 @@ object SbtPlugin extends AutoPlugin {
   )
 
   private[this] def playerHtml(videoId: String): String =
-    s"""<!DOCTYPE html>
+    raw"""<!DOCTYPE html>
        |<html>
        |  <body style="background: #000; text-align: center;">
+       |    <pre style="color: #0f0;">
+       |   _____  ____  ______  __  __ ____   __  __ ______ __  __ ____   ______
+       |  / ___/ / __ )/_  __/  \ \/ // __ \ / / / //_  __// / / // __ ) / ____/
+       |  \__ \ / __  | / /______\  // / / // / / /  / /  / / / // __  |/ __/   
+       | ___/ // /_/ / / //_____// // /_/ // /_/ /  / /  / /_/ // /_/ // /___   
+       |/____//_____/ /_/       /_/ \____/ \____/  /_/   \____//_____//_____/   
+       |                                                                
+       |
+       |    </pre>
+       |
        |    <div id="player"></div>
        |
        |    <script>
