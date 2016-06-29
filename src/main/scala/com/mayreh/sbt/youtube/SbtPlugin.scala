@@ -6,7 +6,13 @@ import sbt._, Keys._
 
 object SbtPlugin extends AutoPlugin {
 
-  object autoImport {
+  trait Keys {
+    lazy val youtubePlaylist = SettingKey[Seq[String]]("youtube-playlist", "Specify youtube video ids to play.")
+  }
+
+  object Keys extends Keys
+
+  object autoImport extends Keys {
     private[this] val briefHelp = "Play youtube video while executing command."
     private[this] val detail =
       """Play youtube video while executing command.
@@ -38,8 +44,6 @@ object SbtPlugin extends AutoPlugin {
         Option(tempFile).foreach(_.delete())
       }
     }
-
-    lazy val youtubePlaylist = SettingKey[Seq[String]]("youtube-playlist", "Specify youtube video ids to play.")
   }
 
   import autoImport._
