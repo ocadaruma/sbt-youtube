@@ -26,12 +26,39 @@ If you've installed chromedriver via `homebrew`, you don't need to do this.
 Add the plugin in `project/plugins.sbt`:
 
 ```scala
-addSbtPlugin("com.mayreh" % "sbt-youtube" % "0.1.0")
+addSbtPlugin("com.mayreh" % "sbt-youtube" % "0.1.1")
 ```
 
 Setup playlist in `(project root)/youtube.sbt`:
 
 ```scala
+// list of youtube video ids.
+youtubePlaylist ++= Seq(
+  // Perfume
+  "q6T0wOMsNrI", // FLASH
+  "K54CYowOqxM", // レーザービーム
+  "7PtvnaEo9-0", // Spring of Life
+  "H4znsXCH_2Y", // Spending all my time
+  "guqVgQFvXXY", // Cling Cling
+  "CYL3DnyA4e0", // Sweet Refrain
+  "vhfYis6VuXY", // Pick Me Up
+  "ihNaFCEd0Ms"  // 1mm
+)
+```
+
+#### As global plugin
+
+You can also install as global plugin. `~/.sbt/0.13/plugins/plugins.sbt`:
+
+```scala
+addSbtPlugin("com.mayreh" % "sbt-youtube" % "0.1.1")
+```
+
+Playlist in `~/.sbt/0.13/youtube.sbt`:
+
+```scala
+import com.mayreh.sbt.youtube.SbtPlugin.Keys._ 
+
 // list of youtube video ids.
 youtubePlaylist ++= Seq(
   // Perfume
