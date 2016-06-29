@@ -1,6 +1,8 @@
 # sbt-youtube
 
-No more boredom!
+No more compile time boredom!
+
+This plugin is inspired by [sbt-musical](https://github.com/tototoshi/sbt-musical).
 
 ## Requirements
 
