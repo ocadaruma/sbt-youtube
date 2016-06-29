@@ -17,6 +17,8 @@ or
 $ sbt -Dwebdriver.chrome.driver=/path/to/chromedriver
 ```
 
+If you've installed chromedriver via `homebrew`, you don't need to do this.
+
 ## Usage
 
 ### Installation
